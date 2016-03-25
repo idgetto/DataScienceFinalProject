@@ -64,3 +64,4 @@ target/
 # Private Data
 data/
 *.*sv
+*.xlsx
