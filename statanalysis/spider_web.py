@@ -44,12 +44,12 @@ def spider_plot(features, values):
         plt.plot([0, x], [0, y], color='black', ls='--')
     points = np.asarray(outer_points)
     pgon = Polygon(points, color='black', closed=True, alpha=0.1)
-    plt.gca().add_patch(pgon)
+    # plt.gca().add_patch(pgon)
         
     # plot data values
     value_points = get_data_points(angles, values, radius)
     points = np.asarray(value_points)
-    pgon = Polygon(points, closed=True, alpha=0.5)
+    pgon = Polygon(points, closed=True, alpha=0.05)
     plt.gca().add_patch(pgon)
     
     # label features
