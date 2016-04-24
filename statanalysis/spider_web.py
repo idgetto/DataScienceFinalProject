@@ -73,6 +73,11 @@ def plot_data(values):
         
         pgon = Polygon(points, closed=True, alpha=opacity)
         plt.gca().add_patch(pgon)
+        
+    # show max value
+    angle = (angles[0] + angles[-2]) / 2.0
+    x, y = get_polygon_point(angle, 0.9*radius)
+    plt.text(x, y, str(int(max_value)), fontdict={'fontsize':14})
 
 def students_spider_plot(student_ids):
     import pandas as pd
